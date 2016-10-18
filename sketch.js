@@ -4,8 +4,8 @@ var asteroids = [];
 
 function setup() {
   createCanvas(600, 600);
-  for (var i = 0; i < 20; i++) {
-    asteroids[i] = new Asteroid();
+  for (var i = 0; i < 10; i++) {
+    asteroids[i] = new Asteroid(random(250,300),random(250,300),random(100,270),random(-3,3),random(0,360),random(20,50),random(50,200));
   }
 
 }
@@ -19,14 +19,14 @@ function draw() {
 
 }
 
- function Asteroid() {
-      this.x = 300,
-      this.y = 300,
-      this.r = random(100,270),
-      this.speed = random(-5,5),
-      this.rad1 = random(0,360),
-      this.radius = random(20,50),
-      this.cc = random(50,200),
+ function Asteroid(x,y,r,speed,rad1,radius,cc) {
+      this.x = x;
+      this.y = y;
+      this.r = r;
+      this.speed = speed;
+      this.rad1 = rad1;
+      this.radius = radius;
+      this.cc = cc;
       
       this.display = function() {
         fill(this.cc);
